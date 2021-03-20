@@ -10,6 +10,13 @@ var MessagesView = {
     App.fetch (function (data) {
       for (i = 0; i < data.length; i++) {
         MessagesView.render(data[i]);
+
+        // check duplication before adding
+        if (Rooms.existingRooms[(data[i]['roomname'])] === undefined) {
+          RoomsView.render(data[i]['roomname']);
+          Rooms.existingRooms[(data[i]['roomname'])] = true;
+        }
+
       }
 
     });

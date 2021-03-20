@@ -15,8 +15,8 @@ var FormView = {
     //  post it to the server.
     // get user input(name, message....)
     var text = document.querySelector('#message').value;
-    var room = null;
-    
+    var room = $('#rooms :selected').text();
+
     console.log(App.username);
     var message = Messages.create(App.username, text, room);
 
