@@ -9,8 +9,12 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    
-    console.log('click!');
+
+    console.log('clicked');
+    //  get the message from the form
+    //  post it to the server.
+
+
   },
 
   setStatus: function(active) {
@@ -19,3 +23,7 @@ var FormView = {
   }
 
 };
+
+
+//var mytemplate = _.template('<p> <%= username%> </p>')
+

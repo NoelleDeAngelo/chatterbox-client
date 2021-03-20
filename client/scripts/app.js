@@ -14,6 +14,8 @@ var App = {
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+    //add
+
 
   },
 
@@ -22,7 +24,8 @@ var App = {
       // examine the response from the server request:
       console.log(data);
 
-      callback();
+
+      callback(data);
     });
   },
 
